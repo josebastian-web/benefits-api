@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "a10acec8-5de4-4bcc-a0f9-807a2ef5869d",
+		"name": "Benefits Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36853162"
+	},
+	"item": [
+		{
+			"name": "Petición exitosa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/benefits-list?minAmount=1000&maxAmount=200000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"benefits-list"
+					],
+					"query": [
+						{
+							"key": "minAmount",
+							"value": "1000"
+						},
+						{
+							"key": "maxAmount",
+							"value": "200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Petición erronea",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/benefits-list?minAmount=asdsdas&maxAmount=200000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"benefits-list"
+					],
+					"query": [
+						{
+							"key": "minAmount",
+							"value": "asdsdas"
+						},
+						{
+							"key": "maxAmount",
+							"value": "200000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
